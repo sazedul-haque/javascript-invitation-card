@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Invitation Card</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Margarine|Roboto" rel="stylesheet"> -->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+
+
+	<section class="sample-details">
+		<div class="box-container">
+			<div class="sample-details-top">
+				<h3>Make Your Dream Card</h3>
+				<button class="btn btn-default add-text" onclick="addTextField()">Add text</button>
+				<button class="btn btn-default"onclick="downloadImage()">Download</button>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-4">
+					<div class="customize-area design-one">
+						<ul id="customize-text-boxes">
+							<li class="text-box">
+								<div class="header"></div>
+								<textarea rows="1">Text box one Text box one  Text box one Text box one</textarea>
+								<div class="remove"></div>
+							</li>
+							<li class="text-box">
+								<div class="header"></div>
+								<textarea rows="1">Text box two</textarea>
+								<div class="remove"></div>
+							</li>
+							<li class="text-box">
+								<div class="header"></div>
+								<textarea rows="1" class="active">Text box three</textarea>
+								<div class="remove"></div>
+							</li>
+						</ul>
+						<div class="customize-options">
+							<h4>Style Your Message</h4>
+							<div class="font-family">
+								<p onclick="showFamilyList()"><span id="selected-family">Roboto, sans-serif</span> <i class="fas fa-angle-down"></i></p>
+								<ul id="family-list">
+									<li class="active">Roboto, sans-serif</li>
+									<li>Margarine, cursive</li>
+									<li>"Dancing Script", cursive</li>
+								</ul>
+							</div>
+
+							<div class="font-size">
+								<p id="show-font-size"></p>
+								<input id="update-font-size" type="range" value="14" min="10" max="200">
+							</div>
+							
+							<div class="color-box">
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+								<div class="color"></div>
+							</div>
+
+							<div class="text-align">
+								<div class="left" onclick="changeAlign('left')"><i class="fa fa-align-left"></i></div>
+								<div class="center" onclick="changeAlign('center')"><i class="fa fa-align-center"></i></div>
+								<div class="right" onclick="changeAlign('right')"><i class="fa fa-align-right"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<script src="assets/js/dom-to-image.min.js"></script>
+	<script src="assets/js/functions.js"></script>
+</body>
+</html>
