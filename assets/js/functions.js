@@ -1,10 +1,10 @@
 
-	let customizeTextBoxes = document.getElementById('customize-text-boxes');
-	let customizeArea = document.querySelector('.customize-area');
-	let customizeOptions = document.querySelector('.customize-options');
+	const customizeTextBoxes = document.getElementById('customize-text-boxes');
+	const customizeArea = document.querySelector('.customize-area');
+	const customizeOptions = document.querySelector('.customize-options');
+	const selectedFamily = document.getElementById('selected-family');
 	let textBox = null;
 	let textArea = null;
-	var selectedFamily = document.getElementById('selected-family');
 	let removeField = null;
 	customizeTextBoxes.addEventListener('click', function(e) {
 		if(e.target && e.target.nodeName == 'TEXTAREA') {
@@ -96,10 +96,10 @@
 
 
 	//update font family
-	var a = document.querySelectorAll("#family-list li");
-	for (var i = 0, length = a.length; i < length; i++) {
+	let a = document.querySelectorAll("#family-list li");
+	for (let i = 0, length = a.length; i < length; i++) {
 	  a[i].onclick = function() {
-	    var b = document.querySelector("#family-list li.active");
+	    let b = document.querySelector("#family-list li.active");
 	    if (b) b.classList.remove("active");
 	    this.classList.add('active');
 
@@ -116,8 +116,8 @@
 
 
 	//update font size
-	var setFontSize = document.getElementById('update-font-size');
-	var showFontSize = document.getElementById('show-font-size');
+	let setFontSize = document.getElementById('update-font-size');
+	let showFontSize = document.getElementById('show-font-size');
 	showFontSize.innerHTML = setFontSize.value + ' px';
 	function updateFontSize() {
 		if(textArea){
@@ -133,7 +133,7 @@
 
 
 	//update color
-	var colorBox = document.querySelectorAll(".color-box div");
+	let colorBox = document.querySelectorAll(".color-box div");
 	for(i = 0; i < colorBox.length; i++){
 		colorBox[i].onclick = function() {
 			const colorStyle = getComputedStyle(this);
